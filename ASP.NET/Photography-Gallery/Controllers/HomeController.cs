@@ -10,21 +10,13 @@ namespace Photography_Gallery.Controllers
     {
         public ActionResult Index()
         {
-            return View();
-        }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
+            ViewData["titleApplication"] = "ASP Photo Gallery";
 
-            return View();
-        }
+            Photographies photographies = new Photographies();
+            photography photography = Photographies.GetAllPhotographies();
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return View("Index");
         }
     }
 }
