@@ -84,3 +84,9 @@ C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\obj\De
 C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\obj\Debug\Photography-Gallery.csproj.CopyComplete
 C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\obj\Debug\Photography-Gallery.dll
 C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\obj\Debug\Photography-Gallery.pdb
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\bin\EntityFramework.dll
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\bin\EntityFramework.SqlServer.dll
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\bin\WebDriver.dll
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\bin\EntityFramework.xml
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\bin\EntityFramework.SqlServer.xml
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\bin\WebDriver.xml

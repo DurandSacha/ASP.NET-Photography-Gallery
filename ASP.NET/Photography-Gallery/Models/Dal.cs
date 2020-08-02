@@ -5,6 +5,14 @@ using System.Web;
 
 namespace Photography_Gallery.Models
 {
+    /*
+    public class BddContext : DbContext
+    {
+        public DbSet<Photography> Photography { get; set; }
+        public DbSet<User> User { get; set; }
+    }
+    */
+
     public interface IDal : IDisposable
     {
         List<User> getAllUsers();
@@ -19,13 +27,14 @@ namespace Photography_Gallery.Models
             bdd = new BddContext();
         }
 
-        
+        /*
         public List<Users> getAllUsers()
         {
             //return "GetAllUserFunction";
             //return bdd.users.GetAllUsers();
             return bdd.User.GetAllUsers();
         }
+        */
         
         
         public void Dispose()
