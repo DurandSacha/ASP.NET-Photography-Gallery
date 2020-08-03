@@ -36,6 +36,7 @@ namespace Photography_Gallery.Controllers
         }
 
         // GET: Photography/Create
+        //[Authorize]
         public ActionResult Create()
         {
             return View();
@@ -59,6 +60,7 @@ namespace Photography_Gallery.Controllers
         }
 
         // GET: Photography/Edit/5
+        //[Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -76,6 +78,7 @@ namespace Photography_Gallery.Controllers
         // POST: Photography/Edit/5
         // Pour vous protéger des attaques par survalidation, activez les propriétés spécifiques auxquelles vous souhaitez vous lier. Pour 
         // plus de détails, consultez https://go.microsoft.com/fwlink/?LinkId=317598.
+        //[Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "id,Nom,Path")] Photography photography)
@@ -90,6 +93,7 @@ namespace Photography_Gallery.Controllers
         }
 
         // GET: Photography/Delete/5
+        //[Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)

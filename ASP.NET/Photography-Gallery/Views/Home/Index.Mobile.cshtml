@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Index.Mobile";
+}
+
+<h2>Index.Mobile</h2>
+
+<div class="jumbotron">
+    <h1>Mobile ASP.NET WEB Gallery | @ViewData["Username"]</h1>
+    <p class="lead">A web application for share a animals photography</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2> Hello <span style="color:red">@ViewData["titleApplication"]</span></h2>
+        <p>
+            A web application for share a animals photography
+        </p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Diaporama</h2>
+        <p>A caroussel for view a differents photography</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Classed in category</h2>
+        <p>Choose your category</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+<br />
+<br />
+<br />
+<div class="container centered">
+    <div class="row">
+        <div class="col-lg-8">
+            <table class="table">
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Path</th>
+                </tr>
+                @foreach (Photography_Gallery.Models.Photography client in ViewData["Photographies"] as List<Photography_Gallery.Models.Photography>)
+                {
+                    <tr>
+                        <th scope="row">@client.id</th>
+                        <td>@client.Nom</td>
+                        <td>@client.Path</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div>
+    @Html.Partial("registerForm")
+</div>

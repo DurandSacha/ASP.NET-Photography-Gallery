@@ -23,7 +23,7 @@ namespace Photography_Gallery.Controllers
 
             // var from controllers to view
             ViewData["titleApplication"] = "ASP Photo Gallery";
-
+            ViewData["Username"] = HttpContext.User.Identity.Name;
             // Create Photography Lists
             Photographies photographies = new Photographies();
             ViewData["Photographies"] = photographies.GetAllPhotographies(); //.FirstOrDefault();
