@@ -1,0 +1,15 @@
+﻿@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Inscription a l'application :</legend>
+        @Html.Label("Login")
+        @Html.TextBox("login")
+        <br />
+
+        @Html.Label("Mot de passe")
+        @Html.TextBox("mdp")
+        <br />
+        <input type="submit" value="Inscription" />
+    </fieldset>
+}
+
