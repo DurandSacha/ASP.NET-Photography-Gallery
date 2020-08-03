@@ -28,10 +28,12 @@ namespace Photography_Gallery.Controllers
             Photographies photographies = new Photographies();
             ViewData["Photographies"] = photographies.GetAllPhotographies(); //.FirstOrDefault();
 
+            // return RedirectToAction("Index");
             // return View("~/Views/Test/Essai.cshtml");
             return View("Index");
         }
 
+        [Authorize]
         public ActionResult About()
         {
             return View("About");

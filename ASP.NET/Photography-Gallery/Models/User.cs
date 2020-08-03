@@ -39,6 +39,11 @@ namespace Photography_Gallery.Models
             bdd.SaveChanges();
         }
 
+        public User GetOneUser(int id)
+        {
+            return bdd.User.FirstOrDefault(u => u.id == id);
+        }
+
         /*
         public void EditUser(int id, string nom, string email)
         {
@@ -72,6 +77,8 @@ namespace Photography_Gallery.Models
     public class BddContext : DbContext
     {
         public DbSet<User> User { get; set; }
+
+        public System.Data.Entity.DbSet<Photography_Gallery.Models.Photography> Photographies { get; set; }
     }
 
 }

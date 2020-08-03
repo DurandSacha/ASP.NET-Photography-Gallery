@@ -12,11 +12,25 @@ namespace Photography_Gallery.Controllers
         public ActionResult register()
         {
             return View("registerForm");
+
+            // if submit 
+            /*
+            string motDePasseEncode = EncodeMD5(motDePasse);
+            Utilisateur utilisateur = new Utilisateur { Prenom = nom, MotDePasse = motDePasseEncode };
+            bdd.Utilisateurs.Add(utilisateur);
+            bdd.SaveChanges();
+            return utilisateur.Id;
+            */
         }
 
         public ActionResult login()
         {
             return View("loginForm");
         }
+
+
+        // id user : HttpContext.User.Identity
+        // user is connected ? : HttpContext.User.Identity.IsAuthenticated
+        // HttpContext.User.Identity.Name
     }
 }

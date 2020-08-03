@@ -1,0 +1,17 @@
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery-Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery-Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery-Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery-Test\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery-Test\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery-Test\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery-Test\bin\Debug\Photography-Gallery-Test.dll
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery-Test\bin\Debug\Photography-Gallery-Test.pdb
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery-Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery-Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery-Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery-Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery-Test\obj\Debug\Photography-Gallery-Test.csprojAssemblyReference.cache
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery-Test\obj\Debug\Photography-Gallery-Test.csproj.CoreCompileInputs.cache
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery-Test\obj\Debug\Photography-Gallery-Test.csproj.CopyComplete
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery-Test\obj\Debug\Photography-Gallery-Test.dll
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery-Test\obj\Debug\Photography-Gallery-Test.pdb
