@@ -34,6 +34,7 @@ namespace Photography_Gallery.Controllers
         }
 
         [Authorize]
+        [Route("Home/About")]
         public ActionResult About()
         {
             return View("About");

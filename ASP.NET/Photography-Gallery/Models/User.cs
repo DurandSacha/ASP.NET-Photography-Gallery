@@ -8,11 +8,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Photography_Gallery.Models
 {
-    [Table("User")]
+    //[Table("User")]
     public class User
     {
         public int id { get; set; }
-        [Required, MaxLength(20)]
+        [Required /*, MaxLength(20) */]
         public string Nom { get; set; }
         [Required]
         public string Email { get; set; }
