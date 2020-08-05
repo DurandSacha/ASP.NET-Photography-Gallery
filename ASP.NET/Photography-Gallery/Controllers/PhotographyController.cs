@@ -13,7 +13,7 @@ namespace Photography_Gallery.Controllers
 {
     public class PhotographyController : Controller
     {
-        private PhotographyContext db = new PhotographyContext();
+        public PhotographyContext db = new PhotographyContext();
 
         // GET: Photography
         public ActionResult Index()

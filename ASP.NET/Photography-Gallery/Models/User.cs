@@ -20,6 +20,7 @@ namespace Photography_Gallery.Models
 
     public class Users
     {
+        /*
         private BddContext bdd;
 
         public List<User> GetAllUsers()
@@ -35,14 +36,17 @@ namespace Photography_Gallery.Models
 
         public void CreateOneUser(string nom, string email)
         {
-            bdd.User.Add(new User { Nom = nom, Email = email });
-            bdd.SaveChanges();
+            //bdd.User.Add(new User { Nom = nom, Email = email });
+            //bdd.SaveChanges();
         }
+        */
 
+        /*
         public User GetOneUser(int id)
         {
             return bdd.User.FirstOrDefault(u => u.id == id);
         }
+        */
 
         /*
         public void EditUser(int id, string nom, string email)
@@ -57,6 +61,7 @@ namespace Photography_Gallery.Models
         }
         */
 
+        /*
         public void CreateFourUserFixtures()
         {
             bdd.User.Add(new User { id = 1, Nom = "Sacha", Email = "sacha6623@gmail.com" });
@@ -66,20 +71,24 @@ namespace Photography_Gallery.Models
     
             bdd.SaveChanges();
         }
+        */
 
+        /*
         public void Dispose()
         {
             bdd.Dispose();
         }
+        */
     }
 
-
+    /*
     public class BddContext : DbContext
     {
         public DbSet<User> User { get; set; }
 
         public System.Data.Entity.DbSet<Photography_Gallery.Models.Photography> Photographies { get; set; }
     }
+    */
 
 }
 
