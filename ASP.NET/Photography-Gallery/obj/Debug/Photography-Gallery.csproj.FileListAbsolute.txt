@@ -113,4 +113,5 @@ C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\bin\Sy
 C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\bin\System.Numerics.Vectors.xml
 C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\bin\System.Threading.Tasks.Extensions.xml
-C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\obj\Debug\Photography-Gallery.csprojAssemblyReference.cache
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\bin\EntityFramework.SqlServer.dll
+C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\bin\EntityFramework.SqlServer.xml

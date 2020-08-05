@@ -13,7 +13,8 @@ namespace Photography_Gallery.Controllers
 {
     public class PhotographyController : Controller
     {
-        public PhotographyContext db = new PhotographyContext();
+        //public PhotographyContext db = new PhotographyContext();
+        public BddContext db = new BddContext();
 
         // GET: Photography
         public ActionResult Index()
@@ -77,8 +78,6 @@ namespace Photography_Gallery.Controllers
         }
 
         // POST: Photography/Edit/5
-        // Pour vous protéger des attaques par survalidation, activez les propriétés spécifiques auxquelles vous souhaitez vous lier. Pour 
-        // plus de détails, consultez https://go.microsoft.com/fwlink/?LinkId=317598.
         //[Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
