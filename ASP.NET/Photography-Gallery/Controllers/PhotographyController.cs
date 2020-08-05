@@ -6,13 +6,14 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Photography_Gallery.Context;
 using Photography_Gallery.Models;
 
 namespace Photography_Gallery.Controllers
 {
     public class PhotographyController : Controller
     {
-        private BddContext db = new BddContext();
+        private PhotographyContext db = new PhotographyContext();
 
         // GET: Photography
         public ActionResult Index()

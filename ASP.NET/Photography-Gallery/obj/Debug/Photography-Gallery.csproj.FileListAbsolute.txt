@@ -79,7 +79,6 @@ C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\bin\fr
 C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\bin\fr\System.Web.WebPages.resources.dll
 C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\bin\fr\System.Web.WebPages.Deployment.resources.dll
 C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\bin\fr\System.Web.WebPages.Razor.resources.dll
-C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\obj\Debug\Photography-Gallery.csprojAssemblyReference.cache
 C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\obj\Debug\Photography-Gallery.csproj.CoreCompileInputs.cache
 C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\obj\Debug\Photography-Gallery.csproj.CopyComplete
 C:\Users\sacha\Desktop\Developpement\Site Web\ASP.NET\Photography-Gallery\obj\Debug\Photography-Gallery.dll

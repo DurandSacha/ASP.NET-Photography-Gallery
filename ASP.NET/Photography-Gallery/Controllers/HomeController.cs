@@ -12,15 +12,6 @@ namespace Photography_Gallery.Controllers
     {
         public ActionResult Index()
         {
-            // init DB 
-            /*
-            IDatabaseInitializer<BddContext> init = new DropCreateDatabaseAlways<BddContext>();
-            Database.SetInitializer(init);
-            init.InitializeDatabase(new BddContext());
-            */
-
-
-
             // var from controllers to view
             ViewData["titleApplication"] = "ASP Photo Gallery";
             ViewData["Username"] = HttpContext.User.Identity.Name;

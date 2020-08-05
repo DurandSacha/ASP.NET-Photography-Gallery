@@ -5,7 +5,6 @@ using System.Web;
 
 namespace Photography_Gallery.Models
 {
-    // https://openclassrooms.com/fr/courses/1730206-apprenez-asp-net-mvc/1828216-le-modele
     public class Photography
     {
         public int id { get; set; }
