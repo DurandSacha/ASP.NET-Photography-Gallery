@@ -18,6 +18,8 @@ namespace Photography_Gallery.Models
         [Required]
         public string Email { get; set; }
         [Required]
+        //[DataType(DataType.Password)]
+        //[Display(Name = "Mot de passe")]
         public string Password { get; set; }
     }
 
