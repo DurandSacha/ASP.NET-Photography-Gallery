@@ -30,7 +30,7 @@ namespace WebFormsIdentity
         {
             var userStore = new UserStore<IdentityUser>();
             var userManager = new UserManager<IdentityUser>(userStore);
-            var user = userManager.Find(UserName.Text, Password.Text);
+            var user = userManager.Find(Email.Text, Password.Text);
 
             if (user != null)
             {
@@ -51,7 +51,7 @@ namespace WebFormsIdentity
         {
             var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
             authenticationManager.SignOut();
-            Response.Redirect("~/Login.aspx");
+            Response.Redirect("~/Shared/Login.aspx");
         }
     }
 }
