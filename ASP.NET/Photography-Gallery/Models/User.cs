@@ -25,6 +25,12 @@ namespace Photography_Gallery.Models
 
     public class Users
     {
+        public BddContext bdd = new BddContext();
+
+        public User FindByEmail(string Email)
+        {
+            return bdd.User.FirstOrDefault(u => u.Email == Email);
+        }
     }
 
     public interface IDal : IDisposable
@@ -39,6 +45,17 @@ namespace Photography_Gallery.Models
         {
             bdd.User.Add(new User { Nom = Nom, Email = Email, Password = Password });
             bdd.SaveChanges();
+        }
+
+        public User FindByEmail(string Email)
+        {
+            return bdd.User.FirstOrDefault(u => u.Email == Email);
+        }
+
+        public User Authentifier(string nom, string motDePasse)
+        {
+            string motDePasseEncode = motDePasse;
+            return bdd.User.FirstOrDefault(u => u.Nom == nom && u.Password == motDePasseEncode);
         }
 
         public void Dispose()

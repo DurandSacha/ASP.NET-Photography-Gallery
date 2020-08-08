@@ -19,6 +19,7 @@ using Owin;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using System.Web.UI.WebControls;
+using Photography_Gallery.Models;
 
 namespace Photography_Gallery.Controllers
 {
@@ -29,7 +30,7 @@ namespace Photography_Gallery.Controllers
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
-                LoginPath = new PathString("/Login")
+                LoginPath = new PathString("/login")
             });
         }
     }
@@ -56,46 +57,66 @@ namespace Photography_Gallery.Controllers
                     return RedirectToAction("Index", "Home");
                 }
             }
-            //return View("~/Views/Shared/registerForm.cshtml");
             return View("registerForm");
         }
 
         private bool ValidateUser(string Email, string Password)
         {
-            return Email == Password;
+            User User = Users.FindByEmail(Email);
+            //photographies.GetAllPhotographies();
+            //User User = bdd.User.Find(Email);
+            if (User.Password == Password)
+            {
+                //return Email == Password;
+                return true;
+            }
+            return false;
         }
 
         [Route("login")]
-        [HttpPost]
+        //[HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public ActionResult Login(User model, string returnUrl)
+        //[ValidateAntiForgeryToken]
+        public ActionResult loginForm(User model, string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
 
-            if (!ModelState.IsValid)
+            if (Request.HttpMethod == "POST")
             {
-                return View(model);
-            }
-            if (!ValidateUser(model.Email, model.Password))
-            {
-                ModelState.AddModelError(string.Empty, "Le nom d'utilisateur ou le mot de passe est incorrect.");
-                return View(model);
-            }
+                /*
+                if (!ModelState.IsValid)
+                {
+                    ViewData["dump"] = "modelState Non valide";
+                    return View(model);
+                }
+                */
+                if (!ValidateUser(model.Email, model.Password))
+                {
+                    //ViewData["dump"] = "erreur validate user function";
+                    ModelState.AddModelError(string.Empty, "Le nom d'utilisateur ou le mot de passe est incorrect.");
+                    return View(model);
+                }
 
-            // L'authentification est réussie, 
-            // injecter l'identifiant utilisateur dans le cookie d'authentification :
-            var loginClaim = new Claim(ClaimTypes.NameIdentifier, model.Email);
-            var claimsIdentity = new ClaimsIdentity(new[] { loginClaim }, DefaultAuthenticationTypes.ApplicationCookie);
-            var ctx = Request.GetOwinContext();
-            var authenticationManager = ctx.Authentication;
-            authenticationManager.SignIn(claimsIdentity);
+                ViewData["dump"] = "authentification success";
+                // L'authentification est réussie
+                var loginClaim = new Claim(ClaimTypes.NameIdentifier, model.Email);
+                var claimsIdentity = new ClaimsIdentity(new[] { loginClaim }, DefaultAuthenticationTypes.ApplicationCookie);
+                var ctx = Request.GetOwinContext();
+                var authenticationManager = ctx.Authentication;
+                authenticationManager.SignIn(claimsIdentity);
+
+                return RedirectToAction("Index", "Home");
+            }
 
             // Rediriger vers l'URL d'origine :
+            /*
             if (Url.IsLocalUrl(ViewBag.ReturnUrl))
                 return Redirect(ViewBag.ReturnUrl);
+            */
             // Par défaut, rediriger vers la page d'accueil :
-            return RedirectToAction("Index", "Home");
+            //return View("registerForm");
+            return View("loginForm");
+            //return RedirectToAction("loginForm", "Security");
         }
 
         [HttpGet]

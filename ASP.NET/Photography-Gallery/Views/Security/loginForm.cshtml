@@ -1,0 +1,38 @@
+﻿@model Photography_Gallery.Models.User
+
+
+@{
+    Layout = null;
+}
+
+@if (Request.IsAuthenticated)
+{
+    <h3>
+        Vous êtes déjà authentifié avec le login :
+        @Model.Email
+    </h3>
+    @Html.ActionLink("Voulez-vous vous déconnecter ?", "Deconnexion")
+}
+else
+{
+    <p>
+        Veuillez vous authentifier :
+    </p>
+    using (Html.BeginForm())
+    {
+        <div>
+            @Html.LabelFor(m => m.Email)
+            @Html.TextBoxFor(m => m.Email)
+            @Html.ValidationMessageFor(m => m.Email)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Password)
+            @Html.PasswordFor(m => m.Password)
+            @Html.ValidationMessageFor(m => m.Password)
+        </div>
+        @ViewData["dump"]
+        <input type="submit" value="Se connecter" />
+        <br />
+        @Html.ActionLink("Créer un compte", "register")
+    }
+}
