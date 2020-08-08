@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using Photography_Gallery.Models;
 
 
@@ -14,13 +15,11 @@ namespace Photography_Gallery.Controllers
         {
             // var from controllers to view
             ViewData["titleApplication"] = "ASP Photo Gallery";
-            ViewData["Username"] = HttpContext.User.Email;
-            // Create Photography Lists
-            Photographies photographies = new Photographies();
-            ViewData["Photographies"] = photographies.GetAllPhotographies(); //.FirstOrDefault();
+            ViewData["Username"] = Environment.UserName;
 
-            // return RedirectToAction("Index");
-            // return View("~/Views/Test/Essai.cshtml");
+           // Create Photography Lists
+           Photographies photographies = new Photographies();
+            ViewData["Photographies"] = photographies.GetAllPhotographies();
             return View("Index");
         }
 

@@ -1,6 +1,5 @@
 ﻿@model Photography_Gallery.Models.User
 
-
 @{
     Layout = null;
 }
@@ -8,8 +7,7 @@
 @if (Request.IsAuthenticated)
 {
     <h3>
-        Vous êtes déjà authentifié avec le login :
-        @Model.Email
+        Vous êtes déjà authentifié
     </h3>
     @Html.ActionLink("Voulez-vous vous déconnecter ?", "Deconnexion")
 }

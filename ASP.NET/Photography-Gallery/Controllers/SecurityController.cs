@@ -83,13 +83,9 @@ namespace Photography_Gallery.Controllers
             {
                 if (!ValidateUser(model.Email, model.Password))
                 {
-                    //ViewData["dump"] = "erreur validate user function";
                     ModelState.AddModelError(string.Empty, "Le nom d'utilisateur ou le mot de passe est incorrect.");
                     return View(model);
                 }
-
-                //ViewData["dump"] = "authentification success";
-                // L'authentification est réussie
                 var loginClaim = new Claim(ClaimTypes.NameIdentifier, model.Email);
                 var claimsIdentity = new ClaimsIdentity(new[] { loginClaim }, DefaultAuthenticationTypes.ApplicationCookie);
                 var ctx = Request.GetOwinContext();
@@ -111,6 +107,7 @@ namespace Photography_Gallery.Controllers
         }
 
         [HttpGet]
+        [Route("logout")]
         public ActionResult Logout()
         {
             var ctx = Request.GetOwinContext();

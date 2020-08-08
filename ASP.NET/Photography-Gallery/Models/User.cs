@@ -31,6 +31,11 @@ namespace Photography_Gallery.Models
         {
             return bdd.User.FirstOrDefault(u => u.Email == Email);
         }
+
+        public User getUser(int id)
+        {
+            return bdd.User.FirstOrDefault(u => u.id == id);
+        }
     }
 
     public interface IDal : IDisposable
