@@ -62,9 +62,7 @@ namespace Photography_Gallery.Controllers
 
         private bool ValidateUser(string Email, string Password)
         {
-            User User = Users.FindByEmail(Email);
-            //photographies.GetAllPhotographies();
-            //User User = bdd.User.Find(Email);
+            User User = bdd.User.FirstOrDefault(u => u.Email == Email && u.Password == Password);
             if (User.Password == Password)
             {
                 //return Email == Password;
@@ -83,13 +81,6 @@ namespace Photography_Gallery.Controllers
 
             if (Request.HttpMethod == "POST")
             {
-                /*
-                if (!ModelState.IsValid)
-                {
-                    ViewData["dump"] = "modelState Non valide";
-                    return View(model);
-                }
-                */
                 if (!ValidateUser(model.Email, model.Password))
                 {
                     //ViewData["dump"] = "erreur validate user function";
@@ -97,7 +88,7 @@ namespace Photography_Gallery.Controllers
                     return View(model);
                 }
 
-                ViewData["dump"] = "authentification success";
+                //ViewData["dump"] = "authentification success";
                 // L'authentification est réussie
                 var loginClaim = new Claim(ClaimTypes.NameIdentifier, model.Email);
                 var claimsIdentity = new ClaimsIdentity(new[] { loginClaim }, DefaultAuthenticationTypes.ApplicationCookie);
