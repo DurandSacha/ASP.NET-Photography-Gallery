@@ -15,7 +15,14 @@ namespace Photography_Gallery.Controllers
         {
             // var from controllers to view
             ViewData["titleApplication"] = "ASP Photo Gallery";
-            ViewData["Username"] = Environment.UserName;
+            if (HttpContext.User.Identity.IsAuthenticated)
+            {
+                ViewData["Username"] = Environment.UserName;
+            }
+            else
+            {
+                ViewData["Username"] = null;
+            }
 
            // Create Photography Lists
            Photographies photographies = new Photographies();

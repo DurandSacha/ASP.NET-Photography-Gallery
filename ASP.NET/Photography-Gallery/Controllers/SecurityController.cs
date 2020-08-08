@@ -20,6 +20,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using System.Web.UI.WebControls;
 using Photography_Gallery.Models;
+using System.Web.Security;
 
 namespace Photography_Gallery.Controllers
 {
@@ -107,14 +108,20 @@ namespace Photography_Gallery.Controllers
         }
 
         [HttpGet]
-        [Route("logout")]
+        [Route("Logout")]
         public ActionResult Logout()
         {
+            
             var ctx = Request.GetOwinContext();
             var authenticationManager = ctx.Authentication;
             authenticationManager.SignOut();
 
             // Rediriger vers la page d'accueil :
+            
+            /*
+            FormsAuthentication.SignOut();
+            //return Redirect("/");
+            */
             return RedirectToAction("Index", "Home");
         }
     }

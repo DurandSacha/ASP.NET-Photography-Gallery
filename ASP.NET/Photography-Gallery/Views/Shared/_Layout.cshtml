@@ -51,7 +51,8 @@
         <footer>
             <p>&copy; @DateTime.Now.Year - Photo Gallery Sacha Durand - created with C# ASP.NET</p>
             <p>
-                @if (Request.IsAuthenticated){ @Html.ActionLink("Voulez-vous vous déconnecter ?", "Deconnexion")}
+                @if (Request.IsAuthenticated)
+                {@Html.ActionLink("Déconnexion", "Logout", "Security")}
             </p>
         </footer>
     </div>
