@@ -38,10 +38,7 @@ namespace Photography_Gallery.Controllers
 
     public class SecurityController : Controller
     {
-        // GET: Security
-
         public BddContext bdd = new BddContext();
-        //public HttpContext context = HttpContext.Current;
 
         [Route("register")]
         public ActionResult Register()
@@ -53,8 +50,13 @@ namespace Photography_Gallery.Controllers
                     bdd.User.Add(new User { Nom = Request.Form["Nom"], Email = Request.Form["Email"], Password = Request.Form["Password"] });
                     // TODO : Crypt Password
                     bdd.SaveChanges();
-                    // TODO : Connect this User 
-                    // HttpContext.SignInAsync(new ClaimsPrincipal(new ClaimsIdentity(claims, "Cookies", "user", "role")));
+
+                    var loginClaim = new Claim(ClaimTypes.NameIdentifier, Request.Form["Email"]);
+                    var claimsIdentity = new ClaimsIdentity(new[] { loginClaim }, DefaultAuthenticationTypes.ApplicationCookie);
+                    var ctx = Request.GetOwinContext();
+                    var authenticationManager = ctx.Authentication;
+                    authenticationManager.SignIn(claimsIdentity);
+
                     return RedirectToAction("Index", "Home");
                 }
             }
@@ -66,7 +68,6 @@ namespace Photography_Gallery.Controllers
             User User = bdd.User.FirstOrDefault(u => u.Email == Email && u.Password == Password);
             if (User.Password == Password)
             {
-                //return Email == Password;
                 return true;
             }
             return false;
@@ -95,33 +96,17 @@ namespace Photography_Gallery.Controllers
 
                 return RedirectToAction("Index", "Home");
             }
-
-            // Rediriger vers l'URL d'origine :
-            /*
-            if (Url.IsLocalUrl(ViewBag.ReturnUrl))
-                return Redirect(ViewBag.ReturnUrl);
-            */
-            // Par défaut, rediriger vers la page d'accueil :
-            //return View("registerForm");
             return View("loginForm");
-            //return RedirectToAction("loginForm", "Security");
         }
 
         [HttpGet]
         [Route("Logout")]
         public ActionResult Logout()
         {
-            
             var ctx = Request.GetOwinContext();
             var authenticationManager = ctx.Authentication;
             authenticationManager.SignOut();
 
-            // Rediriger vers la page d'accueil :
-            
-            /*
-            FormsAuthentication.SignOut();
-            //return Redirect("/");
-            */
             return RedirectToAction("Index", "Home");
         }
     }
